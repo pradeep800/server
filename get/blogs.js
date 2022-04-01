@@ -16,6 +16,6 @@ router.route("/:id").get((req, res) => {
     let a = JSON.stringify(result);
     res.send(a);
   });
-});
+}); //everything is new
 
 module.exports = router;
