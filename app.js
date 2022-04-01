@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
   res.send("nothing here");
 });
 app.use("/blogs", blogs);
-app.use("/post", post);
+// app.use("/post", post);
 app.listen(port, (error) => {
   if (error) {
     console.log(error);
