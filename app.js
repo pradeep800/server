@@ -1,15 +1,12 @@
 const express = require("express");
-const router = require("./get/blogs");
-const post = require("./post/blogs");
+const post = require("./blogs/blogs");
 require("dotenv").config();
-const port = process.env.port;
+const port = process.env.port || 2000;
 const app = express();
-const blogs = require("./get/blogs");
+app.use("/blogs", post);
 app.get("/", (req, res) => {
-  res.send("nothing here");
+  res.send(req);
 });
-// app.use("/blogs", blogs);
-// app.use("/post", post);
 app.listen(port, (error) => {
   if (error) {
     console.log(error);
