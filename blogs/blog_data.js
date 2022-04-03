@@ -1,6 +1,8 @@
 const http = require("fs");
 function temp() {
   return new Promise((resolve, reject) => {
+    let img = __dirname + "/1.jpg";
+
     var image = new Image();
     image.src = img;
     let photo;
