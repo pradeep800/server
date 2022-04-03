@@ -2,7 +2,7 @@ const express = require("express");
 const temp = require("./blog_data");
 let router = express.Router();
 router.route("/").get((req, res) => {});
-router.route("/:id").get((req, res) => {
+router.route("/image").get((req, res) => {
   temp().then(
     (result) => {},
     (err) => {
