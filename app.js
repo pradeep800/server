@@ -1,9 +1,9 @@
 const express = require("express");
 const post = require("./blogs/blogs");
 let img = require("./images/image");
-require("dotenv").config();
+
 const cor = require("cors");
-const port = process.env.port || 2000;
+const port = 2000;
 const app = express();
 app.use(cor());
 app.use("/blogs", post);
