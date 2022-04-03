@@ -5,7 +5,7 @@ const port = process.env.port || 2000;
 const app = express();
 app.use("/blogs", post);
 app.get("/", (req, res) => {
-  res.send(req);
+  res.send("hello  world");
 });
 app.listen(port, (error) => {
   if (error) {

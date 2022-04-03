@@ -3,7 +3,9 @@ let router = express.Router();
 router.route("/").get((req, res) => {
   res.send("welcome to result world");
 });
-router.route("/blogs").get((req, res) => {
-  res.send("hello world");
+router.route("/:id").get((req, res) => {
+  let id = req.params["id"].replace(/:/, "");
+
+  res.send(id);
 });
 module.exports = router;
