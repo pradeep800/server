@@ -1,5 +1,5 @@
-import img from "./1.jpg";
-export default function temp() {
+const http = require("fs");
+function temp() {
   return new Promise((resolve, reject) => {
     var image = new Image();
     image.src = img;
@@ -74,3 +74,4 @@ export default function temp() {
     };
   });
 }
+module.exports = temp;
