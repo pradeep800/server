@@ -1,12 +1,12 @@
 const express = require("express");
-const post = require("./blogs/blogs");
+const blogs = require("./blogs/blogs");
 let img = require("./images/image");
 
 const cor = require("cors");
-const port = 2000;
+const port = 300;
 const app = express();
 app.use(cor());
-app.use("/blogs", post);
+app.use("/blogs", blogs);
 app.use("/image", img);
 app.get("/", (req, res) => {
   res.send("hello  world");
